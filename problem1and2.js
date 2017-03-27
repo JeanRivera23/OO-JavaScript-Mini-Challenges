@@ -42,7 +42,7 @@ function Person(gender, age, name, occupation) {
   this.occupation = occupation;
 }
 
-Person.prototype.personDescripor = function () {
+Person.prototype.personDescriptor = function () {
   return this.name + " is " + this.gender + ", " + this.age + " years old " + "and a " + this.occupation + ".";
 }
 
@@ -70,11 +70,12 @@ School.prototype.addSchoolPeeps = function(person) {
 }
 
 // objects are created/defined
-var bob = new Person("male", 12, "Bob", "student");
-var sue = new Person("female", 5, "Sue", "student");
-var tammy = new Person("female", 45, "Tammy", "science teacher");
-var patrick = new Person("male", 58, "Patrick", "grammar teacher")
-var kelly = new Person("female", 29, "Kelly", "history teacher");
+var jean = new Person("female", 28, "Jean", "artist")
+var bob = new Student("male", 12, "Bob", "student");
+var sue = new Student("female", 5, "Sue", "student");
+var tammy = new Teacher("female", 45, "Tammy", "science teacher");
+var patrick = new Teacher("male", 58, "Patrick", "grammar teacher")
+var kelly = new Teacher("female", 29, "Kelly", "history teacher");
 
 var hamiltonMiddle = new School();
 
@@ -86,8 +87,10 @@ hamiltonMiddle.addSchoolPeeps(kelly);
 
 
 console.log(hamiltonMiddle);
-console.log(bob.personDescripor());
-console.log(sue.personDescripor());
-console.log(tammy.personDescripor());
-console.log(patrick.personDescripor());
-console.log(kelly.personDescripor());
+console.log(bob.personDescriptor());
+console.log(sue.personDescriptor());
+console.log(tammy.personDescriptor());
+console.log(patrick.personDescriptor());
+console.log(kelly.personDescriptor());
+
+console.log(jean.personDescriptor());
